@@ -78,6 +78,7 @@ const getOrders = async (request, response) => {
         element.item = createArrayWithMatchingIDs(item, allItems)
         return element
     })
+
     return response.status(200).json(totalItems)
 }
 

@@ -10,7 +10,9 @@
     "serve:ssr": "node dist/testing-app/server/main.js",
     "build:ssr": "ng build && ng run testing-app:server",
     "prerender": "ng run testing-app:prerender",
-    "prerenderDev": "ng run testing-app:prerender:development"
+    "prerenderDev": "ng run testing-app:prerender:development",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "private": true,
   "dependencies": {

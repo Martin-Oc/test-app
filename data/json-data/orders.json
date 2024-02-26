@@ -1,10 +1,10 @@
 [
   {
-    "orderId": 1707243051496034,
-    "item": "[{\"idItems\":1,\"amount\":1}]",
-    "address": "{\"email\":\"test2@test.sk\",\"name\":\"Test Testov2\",\"address\":\"Hlavna 56\",\"country\":\"Slovakia\",\"city\":\"Tatralandia\",\"post_code\":\"84 475\",\"phone_number\":\"9999 999 999\",\"newsletter\":false,\"terms_and_condition\":true,\"bussiness_account\":false,\"compaty_reg_number\":\"null\",\"VAT\":\"null\",\"BIC\":\"null\",\"IBAN\":\"null\",\"bank_account_holder\":\"null\",\"idUsers\":2}",
-    "shipping": "{\"shipping\":\"Personal pickup\",\"payment\":\"Google Pay\"}",
+    "orderId": 1708869233444018,
+    "item": "[{\"idItems\":3,\"amount\":1}]",
+    "address": "{\"email\":\"asdf@fesaf.sdaf\",\"name\":\"asdf\",\"address\":\"asdfase\",\"country\":\"Algeria\",\"city\":\"asdfae\",\"post_code\":\"asdfaesf\",\"phone_number\":\"1616164647\",\"newsletter\":false,\"terms_and_condition\":true,\"bussiness_account\":false,\"compaty_reg_number\":\"\",\"VAT\":\"\",\"BIC\":\"\",\"IBAN\":\"\",\"bank_account_holder\":\"\",\"idUsers\":\"\"}",
+    "shipping": "{\"shipping\":\"Personal pickup\",\"payment\":\"Credit / Debit Card\"}",
     "userID": "1",
-    "date": "\"06/02/2024\""
+    "date": "\"25/02/2024\""
   }
 ]
