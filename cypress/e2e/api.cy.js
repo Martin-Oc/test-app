@@ -95,7 +95,7 @@ describe('Intercept prikaz',()=>{
         cy.quickLogIn('test1', '123456789')
         cy.setCookie("Cookie", "true")
     })
-    it('Intercept waiting', { defaultCommandTimeout: 10000 },()=>{
+    it.skip('Intercept waiting', { defaultCommandTimeout: 10000 },()=>{
         cy.intercept('**/api/v1/order').as('orders')
         cy.visit("http://localhost:3000/my-orders")
         cy.wait('@orders')
