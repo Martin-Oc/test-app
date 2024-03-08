@@ -96,14 +96,14 @@ describe('Intercept prikaz',()=>{
         cy.setCookie("Cookie", "true")
     })
     it('Intercept waiting', { defaultCommandTimeout: 10000 },()=>{
-        cy.intercept('**/api/v1/orders').as('orders')
+        cy.intercept('**/api/v1/order').as('orders')
         cy.visit("http://localhost:3000/my-orders")
         cy.wait('@orders')
         // cy.wait(5000)
         cy.get('[data-type="my-orders-single-items-headline-div-0"]').should('be.visible')
     })
 
-    it('Intercept waiting',() => {
+    it('Intercept mocking',() => {
         cy.intercept('**/api/v1/user', 
         {
             "idUsers": 1,

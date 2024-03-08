@@ -104,7 +104,7 @@ describe('Node script',function(){
 })
 
 
-describe.only('Page Objects + Custom command', function () {
+describe('Page Objects + Custom command', function () {
     beforeEach(function () {
         cy.task('deleteOrderFile')
         cy.setCookie("Cookie", "true")
