@@ -8,10 +8,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install dependencies
         run: npm install
+
       - name: Start application on server
-        run: npm run start 
+        run: npm run start > app.log 2>&1 &
+
       - name: Wait for application to start
         run: |
           timeout=0
@@ -24,8 +27,17 @@ jobs:
             echo "Application did not start within the timeout period."
             exit 1
           fi
-      - name: Cypress run
+
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
           command-prefix: npx
           wait-on: 'http://localhost:3000'
+
+  # Optional cleanup job
+  cleanup:
+    runs-on: ubuntu-latest
+    needs: [cypress-run]
+    steps:
+      - name: Stop application
+        run: pkill -f "npm run start"
