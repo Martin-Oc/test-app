@@ -16,7 +16,5 @@ jobs:
         run: npm run start > app.log 2>&1 &
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
-        with:
-          command-prefix: npx
-          wait-on: 'http://localhost:3000'
+        run: npm run cy:run
+
