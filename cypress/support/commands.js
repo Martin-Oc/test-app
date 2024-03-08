@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-const { LogInPage } = require("./loginPage")
+import { LogInPage } from "./logInPage"
+// const { LogInPage } = require("./loginPage")
 
 // ***********************************************
 // This example commands.ts shows you how to
