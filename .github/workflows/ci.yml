@@ -4,18 +4,28 @@ on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Install dependencies
         run: npm install
       - name: Start application on server
-        run: npm run start
+        run: npm run start 
+      - name: Wait for application to start
+        run: |
+          timeout=0
+          until curl -sSf "http://localhost:3000" || [ $timeout -eq 30 ]; do
+            echo "Waiting for the application to start..."
+            sleep 5
+            timeout=$((timeout + 5))
+          done
+          if [ $timeout -eq 30 ]; then
+            echo "Application did not start within the timeout period."
+            exit 1
+          fi
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          command-prefix: npx
+          wait-on: 'http://localhost:3000'
