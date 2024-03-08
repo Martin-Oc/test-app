@@ -1,4 +1,3 @@
-const { LogInPage } = require("../support/loginPage")
 const { ShopPage } = require("../support/shopPage")
 const { SummaryOrderPage } = require("../support/summaryPage")
 

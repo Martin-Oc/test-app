@@ -103,7 +103,7 @@ describe('Intercept prikaz',()=>{
         cy.get('[data-type="my-orders-single-items-headline-div-0"]').should('be.visible')
     })
 
-    it.only('Intercept waiting',() => {
+    it('Intercept waiting',() => {
         cy.intercept('**/api/v1/user', 
         {
             "idUsers": 1,
